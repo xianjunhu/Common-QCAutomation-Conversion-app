@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.QCAutomation.Conversion.App", "Common.QCAutomation.Conversion.App\Common.QCAutomation.Conversion.App.csproj", "{15A30C1D-250B-4666-8388-D40B32E1915C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.QCAutomation.Conversion.BLL", "Common.QCAutomation.Conversion.BLL\Common.QCAutomation.Conversion.BLL.csproj", "{60DF8C9D-8A72-480C-B669-2A003E8948F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DD0011D4-5D0F-4821-8012-07468C8BC017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.QCAutomation.Conversion.AppTest", "Common.QCAutomation.Conversion.AppTest\Common.QCAutomation.Conversion.AppTest.csproj", "{279E8E44-5B55-436E-A51C-9009200A56CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.QCAutomation.Conversion.BLLTest", "Common.QCAutomation.Conversion.BLLTest\Common.QCAutomation.Conversion.BLLTest.csproj", "{36B63053-FAB7-4FBF-B2BB-E3472CA3C744}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A30C1D-250B-4666-8388-D40B32E1915C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A30C1D-250B-4666-8388-D40B32E1915C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A30C1D-250B-4666-8388-D40B32E1915C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A30C1D-250B-4666-8388-D40B32E1915C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DF8C9D-8A72-480C-B669-2A003E8948F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DF8C9D-8A72-480C-B669-2A003E8948F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DF8C9D-8A72-480C-B669-2A003E8948F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DF8C9D-8A72-480C-B669-2A003E8948F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{279E8E44-5B55-436E-A51C-9009200A56CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279E8E44-5B55-436E-A51C-9009200A56CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279E8E44-5B55-436E-A51C-9009200A56CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279E8E44-5B55-436E-A51C-9009200A56CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B63053-FAB7-4FBF-B2BB-E3472CA3C744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B63053-FAB7-4FBF-B2BB-E3472CA3C744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B63053-FAB7-4FBF-B2BB-E3472CA3C744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B63053-FAB7-4FBF-B2BB-E3472CA3C744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{279E8E44-5B55-436E-A51C-9009200A56CC} = {DD0011D4-5D0F-4821-8012-07468C8BC017}
+		{36B63053-FAB7-4FBF-B2BB-E3472CA3C744} = {DD0011D4-5D0F-4821-8012-07468C8BC017}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B84EE99-A34B-428B-B229-6C18722F41DD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+name: Build and Deploy QC Automation AWS Lambda Function on AWS using s3 Zip Upload
+
+on:
+  push:
+    branches: [ dev, dryrun, main ]
+  release:
+    types: [published]
+
+jobs:
+  get-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      environment_name: ${{ steps.isEnvironment.outputs.environment_name }}
+      environment_lowercase: ${{ steps.isEnvironment.outputs.environment_lowercase }}
+    steps: 
+    - name: Getting Environment 
+      id: isEnvironment
+      run: |
+       if [[  ${{ github.ref }} == "refs/heads/dev" ]]; then 
+        echo "environment_name=Dev" >> "$GITHUB_OUTPUT"
+        echo "environment_lowercase=dev" >> "$GITHUB_OUTPUT"
+       fi 
+       if [[ ${{ github.ref }} == "refs/heads/dryrun" ]]; then 
+        echo "environment_name=Preprod" >> "$GITHUB_OUTPUT"
+        echo "environment_lowercase=preprod" >> "$GITHUB_OUTPUT"
+       fi
+       if [[ ${{ github.ref }} == "refs/heads/main" ]]; then 
+        echo "environment_name=Prod" >> "$GITHUB_OUTPUT"
+        echo "environment_lowercase=prod" >> "$GITHUB_OUTPUT"
+       fi
+  call-deploy-lambda-function-workflow:
+    needs: [get-environment]
+    uses: Numeris-SoftwareEngineering/SingleSource-Github-Actions-platform/.github/workflows/Reusable-Lambda-Workflow-Aws.yml@main
+    strategy: 
+      matrix:
+        function-name: ["QCA-dataconversion-${{ needs.get-environment.outputs.environment_lowercase }}"]
+    with:
+      environment: ${{ needs.get-environment.outputs.environment_name }}
+      caller_repo: Numeris-SoftwareEngineering/Common-QCAutomation-Conversion-app
+      configuration: Release
+      lambda_package_name: QcAutomation
+      framework_version: 8.0.x
+      project: Common-QCAutomation-Conversion-app
+      project_file: Common.QCAutomation.Conversion.App/Common.QCAutomation.Conversion.App.csproj
+      function-name: ${{ matrix.function-name }}
+      template_parent_path: Common.QCAutomation.Conversion.App
+      aws_s3_bucket_name: numeris-${{ needs.get-environment.outputs.environment_lowercase}}-qca-s3
+    secrets: inherit

@@ -1,0 +1,41 @@
+# These owners will be the default owners for everything in the repo. 
+# Tech-stack teams and Subject matter experts (SME) team 
+# will be requested for review when someone opens a pull request.
+
+# Subject matter experts of the Product
+*       @Numeris-SoftwareEngineering/Common-sme
+
+# .NET developers
+*.cs       @Numeris-SoftwareEngineering/numeris-dotnet
+*.csproj       @Numeris-SoftwareEngineering/numeris-dotnet
+*.sln       @Numeris-SoftwareEngineering/numeris-dotnet
+*.edmx       @Numeris-SoftwareEngineering/numeris-dotnet
+*.mdf       @Numeris-SoftwareEngineering/numeris-dotnet
+*.cshtml       @Numeris-SoftwareEngineering/numeris-dotnet
+
+# Scala developers
+*.sc       @Numeris-SoftwareEngineering/numeris-scala
+*.scala       @Numeris-SoftwareEngineering/numeris-scala
+
+# FrontEnd developers
+*.css       @Numeris-SoftwareEngineering/numeris-frontend
+*.scss       @Numeris-SoftwareEngineering/numeris-frontend
+*.js       @Numeris-SoftwareEngineering/numeris-frontend
+*.ts       @Numeris-SoftwareEngineering/numeris-frontend
+*.html       @Numeris-SoftwareEngineering/numeris-frontend
+
+# PHP developers
+*.php       @Numeris-SoftwareEngineering/numeris-php
+*.phtml       @Numeris-SoftwareEngineering/numeris-php
+
+# DB developers
+*.sql       @Numeris-SoftwareEngineering/numeris-sql
+*.pks       @Numeris-SoftwareEngineering/numeris-sql
+*.pck       @Numeris-SoftwareEngineering/numeris-sql
+*.pkb       @Numeris-SoftwareEngineering/numeris-sql
+
+# Perl developers
+*.pl       @Numeris-SoftwareEngineering/numeris-perl
+
+# Java developers
+*.java       @Numeris-SoftwareEngineering/numeris-java
